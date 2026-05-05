@@ -1,0 +1,20 @@
+project        = "lablms"
+environment    = "prod"
+location       = "westeurope"
+
+image_repository = "lab-lms"
+image_tag        = "latest"
+
+# Generate with: openssl rand -base64 48
+session_secret = "REPLACE_ME_WITH_A_RANDOM_32_PLUS_CHAR_STRING_AAAAAAAA"
+
+min_replicas        = 1
+max_replicas        = 3
+cpu                 = 0.5
+memory              = "1Gi"
+data_share_quota_gb = 5
+
+tags = {
+  owner   = "bazam"
+  cost_ct = "lab"
+}
